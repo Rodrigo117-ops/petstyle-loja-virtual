@@ -1,0 +1,8 @@
+{
+  "name": "petstyle-loja-virtual",
+  "version": "1.0.0",
+  "description": "Landing page otimizada da Pet&Style",
+  "scripts": {
+    "build": "node scripts/minify-html.mjs"
+  }
+}
