@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pet&Style • Loja para pets com estilo</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // (Opcional) pequena personalização de cores com CDN
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#fff7f7',
+                100: '#ffe8ea',
+                200: '#ffd0d6',
+                300: '#ffacb8',
+                400: '#ff7a92',
+                500: '#f54a6a', // cor principal (rosa-framboesa)
+                600: '#df3356',
+                700: '#b62446',
+                800: '#8e203c',
+                900: '#741d36',
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <meta name="description" content="Pet&Style — produtos estilosos para seu pet: caminhas, brinquedos e acessórios. Envio rápido e atendimento nota 10." />
+  </head>
+
+  <body class="min-h-screen bg-white text-slate-800 antialiased">
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-2">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-500 text-white text-lg">🐾</span>
+            <span class="font-extrabold tracking-tight text-xl">Pet&Style</span>
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="hidden md:flex items-center gap-6 font-medium">
+            <a href="#produtos" class="hover:text-brand-600">Produtos</a>
+            <a href="#depoimentos" class="hover:text-brand-600">Depoimentos</a>
+            <a href="#contato" class="hover:text-brand-600">Contato</a>
+            <a href="#" class="inline-flex items-center rounded-xl bg-brand-500 px-4 py-2 text-white hover:bg-brand-600 transition">Ver ofertas</a>
+          </nav>
+
+          <!-- Mobile menu button -->
+          <button aria-label="Abrir menu" id="btn-menu" class="md:hidden inline-flex items-center justify-center rounded-xl p-2 hover:bg-slate-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile nav drawer -->
+      <div id="mobile-nav" class="md:hidden hidden border-t border-slate-200">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-2">
+          <a href="#produtos" class="py-2">Produtos</a>
+          <a href="#depoimentos" class="py-2">Depoimentos</a>
+          <a href="#contato" class="py-2">Contato</a>
+          <a href="#" class="inline-flex items-center justify-center rounded-xl bg-brand-500 px-4 py-2 text-white hover:bg-brand-600 transition mt-2">Ver ofertas</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="text-center lg:text-left">
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+            Estilo que combina com o seu pet
+          </h1>
+          <p class="mt-4 text-lg text-slate-600">
+            Camas, brinquedos e acessórios com design e conforto. Entregamos em todo o Brasil.
+          </p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <a href="#produtos" class="inline-flex items-center justify-center rounded-xl bg-brand-500 px-5 py-3 text-white font-semibold hover:bg-brand-600 transition">
+              Comprar agora
+            </a>
+            <a href="#contato" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:bg-slate-50 transition">
+              Fale com a gente
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            class="w-full max-h-[480px] object-cover rounded-3xl shadow-xl"
+            src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1600&auto=format&fit=crop"
+            alt="Cachorro estiloso com bandana colorida" onerror="this.onerror=null;this.src='https://placekitten.com/1200/720';"
+          />
+          <div class="absolute -bottom-4 -left-4 hidden sm:block h-24 w-24 rounded-3xl bg-brand-500/20 blur-2xl"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between flex-wrap gap-4">
+          <div>
+            <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">Produtos em destaque</h2>
+            <p class="mt-2 text-slate-600">Tudo que seu amigo precisa — com muito estilo.</p>
+          </div>
+          <a href="#" class="inline-flex items-center rounded-xl border border-slate-300 px-4 py-2 font-medium hover:bg-slate-50">Ver todos</a>
+        </div>
+
+        <!-- Grid de produtos -->
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <article class="group flex flex-col rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-sm hover:shadow-md transition">
+            <img src="https://images.pexels.com/photos/691129/pexels-photo-691129.jpeg" alt="Caminha de pelúcia" onerror="this.onerror=null;this.src='https://placekitten.com/800/480';" class="h-48 w-full object-cover" />
+            <div class="p-4 flex flex-col gap-2">
+              <h3 class="font-semibold text-slate-900 group-hover:text-brand-600">Caminha Plush Cloud</h3>
+              <p class="text-sm text-slate-600">Conforto máximo com espuma de memória e base antiderrapante.</p>
+              <div class="mt-2 flex items-center justify-between">
+                <span class="text-lg font-bold text-slate-900">R$ 179,90</span>
+                <button class="rounded-xl bg-brand-500 px-3 py-2 text-white text-sm hover:bg-brand-600">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="group flex flex-col rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-sm hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?q=80&w=1600&auto=format&fit=crop" alt="Brinquedo mordedor" class="h-48 w-full object-cover" onerror="this.onerror=null;this.src='https://placekitten.com/802/482';" />
+            <div class="p-4 flex flex-col gap-2">
+              <h3 class="font-semibold text-slate-900 group-hover:text-brand-600">Mordedor NeoBone</h3>
+              <p class="text-sm text-slate-600">Silicone atóxico e ultra-resistente para horas de diversão.</p>
+              <div class="mt-2 flex items-center justify-between">
+                <span class="text-lg font-bold text-slate-900">R$ 49,90</span>
+                <button class="rounded-xl bg-brand-500 px-3 py-2 text-white text-sm hover:bg-brand-600">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="group flex flex-col rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-sm hover:shadow-md transition">
+            <img src="https://images.pexels.com/photos/34367629/pexels-photo-34367629.jpeg" alt="Coleira estilosa" onerror="this.onerror=null;this.src='https://placekitten.com/801/481';" class="h-48 w-full object-cover" />
+            <div class="p-4 flex flex-col gap-2">
+              <h3 class="font-semibold text-slate-900 group-hover:text-brand-600">Coleira Urban Fit</h3>
+              <p class="text-sm text-slate-600">Nylon premium com fecho metálico e ajuste confortável.</p>
+              <div class="mt-2 flex items-center justify-between">
+                <span class="text-lg font-bold text-slate-900">R$ 69,90</span>
+                <button class="rounded-xl bg-brand-500 px-3 py-2 text-white text-sm hover:bg-brand-600">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="group flex flex-col rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-sm hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1546975490-a79abdd54533?q=80&w=1600&auto=format&fit=crop" alt="Bebedouro portátil" class="h-48 w-full object-cover" onerror="this.onerror=null;this.src='https://placekitten.com/803/483';" />
+            <div class="p-4 flex flex-col gap-2">
+              <h3 class="font-semibold text-slate-900 group-hover:text-brand-600">Bebedouro GoBottle</h3>
+              <p class="text-sm text-slate-600">Portátil e antifuga para passeios sem preocupações.</p>
+              <div class="mt-2 flex items-center justify-between">
+                <span class="text-lg font-bold text-slate-900">R$ 89,90</span>
+                <button class="rounded-xl bg-brand-500 px-3 py-2 text-white text-sm hover:bg-brand-600">Adicionar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-16 sm:py-20 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 text-center">O que dizem nossos clientes</h2>
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <blockquote class="text-slate-700">“Entrega rápida e a caminha é simplesmente perfeita. Meu Thor não sai mais dela!”</blockquote>
+            <figcaption class="mt-4 text-sm font-semibold text-slate-900">— Juliana M., São Paulo</figcaption>
+          </figure>
+          <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <blockquote class="text-slate-700">“A coleira Urban Fit é linda e resistente. Ótimo custo-benefício.”</blockquote>
+            <figcaption class="mt-4 text-sm font-semibold text-slate-900">— Rafael M., Belo Horizonte</figcaption>
+          </figure>
+          <figure class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <blockquote class="text-slate-700">“Adorei o atendimento! Me ajudaram a escolher o tamanho certo para a minha Nina.”</blockquote>
+            <figcaption class="mt-4 text-sm font-semibold text-slate-900">— Camila M., Curitiba</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">Fale com a Pet&Style</h2>
+            <p class="mt-3 text-slate-600">Tem dúvidas sobre tamanhos, materiais ou prazos? Estamos prontos para ajudar.</p>
+            <ul class="mt-6 space-y-2 text-slate-700">
+              <li><strong>E-mail:</strong> contato@petstyle.com.br</li>
+              <li><strong>Telefone:</strong> (11) 99999-0000</li>
+              <li><strong>Atendimento:</strong> seg–sex, 9h às 18h</li>
+            </ul>
+          </div>
+
+          <!-- Formulário -->
+          <form class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm grid grid-cols-1 gap-4">
+            <div>
+              <label for="nome" class="block text-sm font-medium text-slate-700">Nome</label>
+              <input id="nome" name="nome" type="text" required class="mt-1 block w-full rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="Seu nome" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-slate-700">E-mail</label>
+              <input id="email" name="email" type="email" required class="mt-1 block w-full rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="voce@email.com" />
+            </div>
+            <div>
+              <label for="mensagem" class="block text-sm font-medium text-slate-700">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" required class="mt-1 block w-full rounded-xl border-slate-300 focus:border-brand-500 focus:ring-brand-500" placeholder="Como podemos ajudar?"></textarea>
+            </div>
+            <button type="submit" class="mt-2 inline-flex items-center justify-center rounded-xl bg-brand-500 px-5 py-3 text-white font-semibold hover:bg-brand-600">Enviar mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-sm text-slate-600">© <span id="year"></span> Pet&Style. Todos os direitos reservados.</p>
+          <nav class="flex items-center gap-4 text-sm text-slate-600">
+            <a href="#" class="hover:text-brand-600">Política de Privacidade</a>
+            <a href="#" class="hover:text-brand-600">Termos de Uso</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script: menu mobile e ano -->
+    <script>
+      const btn = document.getElementById('btn-menu');
+      const nav = document.getElementById('mobile-nav');
+      btn?.addEventListener('click', () => nav.classList.toggle('hidden'));
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
