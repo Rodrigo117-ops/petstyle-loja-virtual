@@ -44,10 +44,3 @@ Abra `http://localhost:3000` (porta padrão do `serve`), rode o Lighthouse nas m
 - [x] Dois relatórios (antes e depois) no diretório `docs/`.
 - [x] README documentando gargalos, melhorias, metodologia e resultados.
 
-## 🌳 Branch principal
-A branch padrão do repositório agora é `main`, onde este commit concentra todas as otimizações documentadas acima. Caso você
-tenha clonado versões anteriores (como `work`), basta fazer `git switch main && git pull` para alinhar com o histórico oficial.
-
-> Observação: arquivos binários como `petstyle-perf-entrega.zip` não são mais versionados. Caso precise reenviar um pacote,
-basta rodar `npm run build` e compactar o diretório resultante manualmente.
-  
